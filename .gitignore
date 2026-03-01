@@ -1,0 +1,10 @@
+build*/
+cmake-build-*/
+opencv/
+*.user
+*.user.*
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.ninja*
