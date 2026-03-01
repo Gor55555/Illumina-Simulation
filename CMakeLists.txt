@@ -12,8 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-# ---- OpenCV ----
-set(OpenCV_DIR "C:/Users/gorkh/OneDrive/Desktop/Illumina-Simulation/opencv/build/x64/vc16/lib")
 find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCES
@@ -27,7 +25,6 @@ set(PROJECT_SOURCES
     Library.hpp
 )
 
-# target name (без дефиса)
 set(APP_TARGET IlluminaSimulation)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -51,7 +48,9 @@ target_link_libraries(${APP_TARGET}
         ${OpenCV_LIBS}
 )
 
-# Bundle/exe properties (оставил как у тебя)
+
+set_target_properties(${APP_TARGET} PROPERTIES OUTPUT_NAME "Illumina-Simulation")
+
 if(${QT_VERSION} VERSION_LESS 6.1.0)
     set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.illumina-simulation)
 endif()
