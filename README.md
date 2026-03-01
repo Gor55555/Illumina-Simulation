@@ -1,6 +1,5 @@
 # Illumina-Simulation
 
-
 ## Simulation Video
 
-[▶ Watch Demo](https://github.com/Gor55555/Illumina-Simulation/blob/main/Illumina.mp4)
+[▶ Download / Watch Demo](https://raw.githubusercontent.com/Gor55555/Illumina-Simulation/main/Illumina.mp4)
